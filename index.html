@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Calculator</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+
+</head>
+<body>
+
+<!-- Jumbotron for Title -->
+<!-- <div class="jumbotron">
+    <h1 class="text-center">jQuery Calculator</h1>
+    <h3 class="text-center">Perform basic mathematic operations using the power of jQuery!</h3>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+      Calculator Card
+      <div class="col-lg-4">
+        <div class="card">
+          <h3 class="card-header">Calculator</h3>
+
+          <div class="card-body">
+            <button id="button-1" class="btn btn-primary number" value="1"><span>1</span></button>
+            <button id="button-2" class="btn btn-primary number" value="2"><span>2</span></button>
+            <button id="button-3" class="btn btn-primary number" value="3"><span>3</span></button>
+            <button id="button-plus" class="btn btn-danger operator" value="plus"><span>+</span></button>
+            <br><br>
+            <button id="button-4" class="btn btn-primary number" value="4"><span>4</span></button>
+            <button id="button-5" class="btn btn-primary number" value="5"><span>5</span></button>
+            <button id="button-6" class="btn btn-primary number" value="6"><span>6</span></button>
+            <button id="button-minus" class="btn btn-danger operator" value="minus"><span>&minus;</span></button>
+            <br><br>
+            <button id="button-7" class="btn btn-primary number" value="7"><span>7</span></button>
+            <button id="button-8" class="btn btn-primary number" value="8"><span>8</span></button>
+            <button id="button-9" class="btn btn-primary number" value="9"><span>9</span></button>
+            <button id="button-multiply" class="btn btn-danger operator" value="times"><span>&times;</span></button>
+            <br><br>
+            <button id="button-0" class="btn btn-primary number" value="0"><span>0</span></button>
+            <button id="button-divide" class="btn btn-danger operator" value="divide"><span>&divide;</span></button>
+            <button id="button-power" class="btn btn-danger operator" value="power"><span>^</span></button>
+            <button id="button-equal" class="btn btn-success equal" value="equals"><span>=</span></button>
+            <br><br>
+            <button id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Card -->
+      <!-- <div class="col-lg-6">
+        <div class="card">
+          <h3 class="card-header">Result</h3>
+          <div class="card-body">
+            <h1 id="first-number"></h1>
+            <h1 id="operator"></h1>
+            <h1 id="second-number"></h1>
+            <hr>
+            <h1 id="result"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <img class="Image1" src="assets\images\quasicrystal.jpeg" height="200" width="200">
+
+  <img class="Image2" src="assets\images\quasicrystal.jpeg" height="200" width="200">
+
+  <img class="Image3" src="assets\images\quasicrystal.jpeg" height="200" width="200">
+
+  <img class="Image4" src="assets\images\quasicrystal.jpeg" height="200" width="200">
+
+  <div id="wins-text"></div>>
+
+</div>
+<div id="losses-text"></div>>
+
+</div>
+
+  <div id="winning-text"></div>>
+
+</div>
+
+<div id="random-text"></div>>
+    
+</div>
+
+<div id="user-text"></divid>>
+    
+</div>
+
+
+<script type="text/javascript">
+
+
+
+$(document).ready(function() {
+
+        var firstNumber = 0;
+        var secondNumber = 0;
+        var thirdNumber = 0;
+        var fourthNumber = 0;
+        var randomNumer = 0
+        var userNumber = o;
+        var wins = 0;
+        var losses = 0;
+
+        var winsText = document.getElementById("wins-text");
+        var winningText = document.getElementById("winning-text");
+        var lossesText = document.getElementById("losses-text");
+        var randomText = document.getElementById("random-text");
+        var userNumberText = document.getElementById("user-text");
+
+    function initializeCrystals() {
+        firstNumber = Math.floor((Math.random() * 12) + 1);
+        secondNumber = Math.floor((Math.random() * 12) + 1);
+        thirdNumber = Math.floor((Math.random() * 12) + 1);
+        fourthNumber = Math.floor((Math.random() * 12) + 1);
+        randomNumer = Math.floor((Math.random() * 120) + 19);
+        userNumber = 0;
+        // isOperatorChosen = false;
+        // isCalculated = false;
+
+        // $("#first-number, #second-number, #operator, #result").empty();
+      }
+
+      if (userNumber > randomNumber) {
+          losses += losses;
+          winningText.textContent = "You Lose";
+          initializeCrystals();
+      }
+
+      if (userNumber = randomNumber) {
+          wins += wins;
+          winningText.textContent = "You Win!";
+          initializeCrystals();
+      }
+
+    
+
+
+
+
+    $(".Image1").click(function(){
+        firstNumber += firstNumber;
+    });
+    
+
+  $(".Image2").click(function(){
+        secondNumber += secondNumber;
+    });
+
+  $(".Image3").click(function(){
+        thirdNumber += thirdNumber;
+    });
+
+  $(".Image4").click(function(){
+        fourthNumber += fourthNumber;
+    });
+
+// Your code here...
+// if
+// $(".btn-primary").on( "click", function(event) {
+
+//   // var firstNumber = ("#first-number")
+//   // .text($(this).attr(value));
+//   // console.log(firstNumber);
+//   var firstNumber = $(this).html()
+//     // .text($(this).attr(firstNumber))
+//     // .data($(this).attr(value));
+//     $(this).attr("value")
+//     console.log(typeof firstNumber);
+//     console.log($(this).attr("value"))
+//     .appendTo(firstNumber)
+//   });
+
+
+// else
+// $(".operator").on( "click", function(event) {
+//   var operator = $(this).html()
+//   $(this).attr("value")
+//   console.log(event);
+    
+
+//   // var secondNumber
+//   $(".btn-primary").on( "click", function(event) {
+//   });
+
+// var secondNumber = $(this).html()
+
+//   $(this).attr("value")
+
+
+// });
+//   // var result
+//   $(".equal").on( "click", function(event) {
+//   var result = $(this).html()
+//   $(this).attr("value")
+//     console.log(typeof result);
+//     console.log($(this).attr("value"))
+//     console.log(event)
+
+
+
+
+
+// });
+});
+
+</script>
+
+</body>
+</html>
