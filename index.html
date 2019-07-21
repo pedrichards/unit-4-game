@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Calculator</title>
+    <title>Crystal Finder</title>
 
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <!-- Added a link to our external stylesheet-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
 
 </head>
 <body>
@@ -82,38 +82,34 @@
 
   <img class="Image4" src="assets\images\quasicrystal.jpeg" height="200" width="200">
 
-  <div id="wins-text"></div>>
+  <div id="wins-text">
 
 </div>
-<div id="losses-text"></div>>
-
-</div>
-
-  <div id="winning-text"></div>>
+<div id="losses-text">
 
 </div>
 
-<div id="random-text"></div>>
+  <div id="winning-text">
+
+</div>
+
+<div id="random-text">
     
 </div>
 
-<div id="user-text"></divid>>
+<div id="user-text">
     
 </div>
 
 
 <script type="text/javascript">
 
-
-
-$(document).ready(function() {
-
-        var firstNumber = 0;
+var firstNumber = 0;
         var secondNumber = 0;
         var thirdNumber = 0;
         var fourthNumber = 0;
-        var randomNumer = 0
-        var userNumber = o;
+        var randomNumber;
+        var userNumber;
         var wins = 0;
         var losses = 0;
 
@@ -123,12 +119,16 @@ $(document).ready(function() {
         var randomText = document.getElementById("random-text");
         var userNumberText = document.getElementById("user-text");
 
+$(document).ready(function() {
+
+
+
     function initializeCrystals() {
         firstNumber = Math.floor((Math.random() * 12) + 1);
         secondNumber = Math.floor((Math.random() * 12) + 1);
         thirdNumber = Math.floor((Math.random() * 12) + 1);
         fourthNumber = Math.floor((Math.random() * 12) + 1);
-        randomNumer = Math.floor((Math.random() * 120) + 19);
+        randomNumber = Math.floor((Math.random() * 120) + 19);
         userNumber = 0;
         // isOperatorChosen = false;
         // isCalculated = false;
@@ -136,14 +136,16 @@ $(document).ready(function() {
         // $("#first-number, #second-number, #operator, #result").empty();
       }
 
+      initializeCrystals();
+
       if (userNumber > randomNumber) {
-          losses += losses;
+          losses++;
           winningText.textContent = "You Lose";
           initializeCrystals();
       }
 
       if (userNumber = randomNumber) {
-          wins += wins;
+          wins++;
           winningText.textContent = "You Win!";
           initializeCrystals();
       }
@@ -154,20 +156,20 @@ $(document).ready(function() {
 
 
     $(".Image1").click(function(){
-        firstNumber += firstNumber;
+        userNumber += firstNumber;
     });
     
 
   $(".Image2").click(function(){
-        secondNumber += secondNumber;
+        userNumber += secondNumber;
     });
 
   $(".Image3").click(function(){
-        thirdNumber += thirdNumber;
+        userNumber += thirdNumber;
     });
 
   $(".Image4").click(function(){
-        fourthNumber += fourthNumber;
+        userNumber += fourthNumber;
     });
 
 // Your code here...
@@ -212,14 +214,17 @@ $(document).ready(function() {
 //     console.log($(this).attr("value"))
 //     console.log(event)
 
-
-
+winsText.textContent = "Wins:" + wins;
+lossesText.textContent = "Losses:" + losses;
+randomText.textContent = randomNumber;
+userNumberText.textContent = userNumber;
 
 
 // });
 });
-
 </script>
+
+
 
 </body>
 </html>
