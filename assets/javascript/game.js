@@ -27,9 +27,6 @@ $(document).ready(function() {
     var randomText = document.getElementById("random-text");
     var userNumberText = document.getElementById("user-text");
 
-  if (randomNumber === 0) {
-    initializeCrystals();
-  }
 
 
 
@@ -37,32 +34,36 @@ $(document).ready(function() {
   if (userNumber > randomNumber) {
       losses++;
       winningText.textContent = "You Lose";
+      lossesText.textContent = "Losses:" + losses;
       initializeCrystals();
   }
 
   if (userNumber === randomNumber) {
       wins++;
       winningText.textContent = "You Win!";
+      winsText.textContent = "Wins:" + wins;
       initializeCrystals();
   }
 
 
 $('#image1').click(function(){
     userNumber += firstNumber;
+    userNumberText.textContent = userNumber;
 });
 
 $('.image2').click(function(){
     userNumber = (userNumber + secondNumber);
-    alert('It works!');
-    // console.log(userNumber);
+    userNumberText.textContent = userNumber;
 });
 
 $('.image3').click(function(){
     userNumber += thirdNumber;
+    userNumberText.textContent = userNumber;
 });
 
 $('.image4').click(function(){
     userNumber += fourthNumber;
+    userNumberText.textContent = userNumber;
 });
 
 console.log(userNumber);
