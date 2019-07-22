@@ -30,40 +30,45 @@ $(document).ready(function() {
 
 
 
+  function checkStatus(){
+        if (userNumber > randomNumber) {
+            losses++;
+            winningText.textContent = "You Lose";
+            lossesText.textContent = "Losses:" + losses;
+            initializeCrystals();
+        }
 
-  if (userNumber > randomNumber) {
-      losses++;
-      winningText.textContent = "You Lose";
-      lossesText.textContent = "Losses:" + losses;
-      initializeCrystals();
-  }
-
-  if (userNumber === randomNumber) {
-      wins++;
-      winningText.textContent = "You Win!";
-      winsText.textContent = "Wins:" + wins;
-      initializeCrystals();
-  }
+        if (userNumber === randomNumber) {
+            wins++;
+            winningText.textContent = "You Win!";
+            winsText.textContent = "Wins:" + wins;
+            initializeCrystals();
+        }
+    }
 
 
 $('#image1').click(function(){
     userNumber += firstNumber;
     userNumberText.textContent = userNumber;
+    checkStatus();
 });
 
 $('.image2').click(function(){
     userNumber = (userNumber + secondNumber);
     userNumberText.textContent = userNumber;
+    checkStatus();
 });
 
 $('.image3').click(function(){
     userNumber += thirdNumber;
     userNumberText.textContent = userNumber;
+    checkStatus();
 });
 
 $('.image4').click(function(){
     userNumber += fourthNumber;
     userNumberText.textContent = userNumber;
+    checkStatus();
 });
 
 console.log(userNumber);
