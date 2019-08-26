@@ -11,3 +11,5 @@
 *Attempt to match the value of the random number exactly
 
 *If your user number's value exceeds that of the random number you will lose that particular game
+
+## [Try the App!](https://pedrichards.github.io/unit-4-game/)
